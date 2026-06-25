@@ -6,4 +6,5 @@ RUN go build -o app .
 FROM alpine:3.19
 WORKDIR /app
 COPY --from=builder /app/app .
+COPY index.html .
 CMD ["./app"]

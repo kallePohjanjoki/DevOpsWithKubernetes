@@ -9,6 +9,10 @@ import (
 func main() {
 	port := os.Getenv("PORT")
 
-	fmt.Printf("Server started in port NNNN")
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "index.html")
+	})
+
+	fmt.Printf("Server started in port %s\n", port)
 	http.ListenAndServe(":"+port, nil)
 }
