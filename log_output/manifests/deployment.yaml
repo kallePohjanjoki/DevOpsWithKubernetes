@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: logoutput
-          image: kallepohjanjoki/log-output:latest
+          image: kallepohjanjoki/log-output:v2
